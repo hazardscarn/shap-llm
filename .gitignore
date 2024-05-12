@@ -1,3 +1,10 @@
 .venv
 .\venv
+venv\
 venv
+stage/
+.env
+.env/
+results/
+sqldatabase/
+__pycache__/

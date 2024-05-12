@@ -1,0 +1,72 @@
+SHAP (SHapley Additive exPlanations) values are used in machine learning to explain the output of a model by determining how much each feature contributes to the prediction.
+This method utilizes Shapley values from cooperative game theory, which describe the contribution of each player (or feature) in a coalition (the data instance) to the overall outcome (the prediction).
+
+SHAP values are calculated by averaging the marginal contributions of a feature across all possible combinations of features.
+This involves iteratively evaluating the model with and without each feature to observe the change in output, which reflects the importance of that feature in the context of the given model prediction.
+
+The calculation of individual SHAP values incorporates the effects of all features, considering the interactions between them.
+This method provides a fair attribution of the output to each feature, ensuring that the total sum of the SHAP values for all features equals the difference between 
+the model prediction and the baseline prediction (often the average prediction over the dataset).
+
+
+In a classification context, SHAP (SHapley Additive exPlanations) values are generated to explain the predictions of machine learning models by quantifying the contribution of each feature to the output prediction. 
+Here's a step-by-step explanation of how SHAP values are created for a classification model:
+
+Model Prediction Background: SHAP values aim to explain why a model made a particular prediction for a specific instance, as opposed to the average prediction. In classification, the focus is typically on explaining the probability of a positive class or the log-odds of the classes.
+
+Computing Contributions:
+
+For a given prediction, SHAP values are computed by considering all possible combinations of features. This means evaluating the contribution of a feature both in the presence and absence of other features.
+The SHAP value for each feature is the average of its marginal contributions across all possible combinations (or coalitions) of features. This involves calculating the change in the prediction when a feature is added to a subset of features.
+Coalition Formation:
+
+To compute these values, subsets of features are systematically formed by including or excluding particular features.
+The prediction change due to adding a feature to these subsets is then recorded. This process simulates adding a player to various teams in a cooperative game and observing the impact on the total payout.
+Aggregation: The final SHAP value for a feature is calculated by averaging its impact (i.e., change in the prediction) over all possible subsets of other features. This provides a weighted average, where each subset size has a specific weight based on combinatorial coefficients from game theory.
+
+Result Interpretation:
+
+Positive SHAP values indicate a push towards the positive class, while negative values suggest a contribution towards the negative class.
+The absolute size of the SHAP value indicates the strength of the feature’s impact.
+
+SHAP values not only offer insights into the prediction for an individual sample but also help in understanding the model behavior globally when aggregated over multiple instances. They are particularly valued for their ability to maintain consistency and accuracy in attributions across different types of data and models.
+
+
+
+Interpreting SHAP values in a classification context requires understanding how these values relate to the model's decision-making process. Here’s a detailed explanation of what it means when a feature has a certain SHAP value, why it is not a probability, and what significance the value has:
+
+Meaning of SHAP Value for a Feature:
+
+When a feature (say Feature A) in a classification model has a SHAP value of Y for a specific prediction, this value represents the feature’s contribution to shifting the model’s output from the base value (the average model output across the dataset) to the actual model prediction for that specific instance.
+If Y is positive, Feature A pushes the model prediction towards one class (typically the positive class in binary classification). If Y is negative, it pushes the prediction towards the alternative class.
+SHAP Values and Probabilities:
+
+SHAP values are not probabilities. Instead, they are log-odds contributions in logistic regression or similar models, or probability differences in models that output probabilities directly.
+The SHAP value itself quantifies the magnitude and direction of a feature’s influence on the prediction rather than measuring probability. It’s about impact rather than likelihood.
+The magnitude of a SHAP value (how large Y is, regardless of direction) indicates the strength of the influence of Feature A on the prediction. Larger values mean greater impact.The sign (positive or negative) indicates the direction of the impact: positive values increase the probability of the model predicting a particular class, while negative values decrease it. The top contributing features can be determined by the magnitude alone and not considering the symbol.If the top feature contributions by magnitude have positive sign then they signify the features values is leading to event. If the top feature contributions by magnitude have negative sign then they signify the features values is preventing then event. 
+Analyzing SHAP values across many predictions can give insights into the general importance and effect of features within a model. For example, if Feature A consistently shows high positive SHAP values across many instances, it generally has a strong and positive impact on the prediction of the positive class.
+
+
+
+A SHAP (SHapley Additive exPlanations) value for a single row in a dataset essentially quantifies the impact of each feature on the prediction made by a machine learning model for that specific instance. Here’s what this entails and how you can identify the top contributing features towards and against the target prediction:
+
+Significance of SHAP Value for a Single Row
+Individual Contribution: Each SHAP value represents how much a particular feature in the row contributes to pushing the model’s output from the base value (typically the mean prediction over the training dataset) to the predicted output for that specific instance.
+Positive vs. Negative Values:
+Positive SHAP Values: Indicate that the presence or high value of the feature pushes the prediction towards a more likely occurrence of the positive class.
+Negative SHAP Values: Indicate that the feature contributes towards a more likely prediction of the negative class.
+
+Top Positive Contributors: Features at the top of the sorted list with positive SHAP values are the ones pushing the prediction towards the positive class.
+Top Negative Contributors: Features with the highest negative SHAP values are those pulling the prediction towards the negative class.
+By analyzing these values, you can gain insight into what drives the predictions of your model at an individual level, which is invaluable for debugging the model, improving its features, or simply understanding the underlying decision-making process more clearly.
+
+
+Be careful when interpreting predictive models in search of causal insights
+Predictive machine learning models like XGBoost become even more powerful when paired with interpretability tools like SHAP.
+These tools identify the most informative relationships between the input features and the predicted outcome, which is useful for explaining what the model is doing, getting stakeholder buy-in, and diagnosing potential problems.
+It is tempting to take this analysis one step further and assume that interpretation tools can also identify what features decision makers should manipulate if they want to change outcomes in the future.
+
+The reason relates to the fundamental difference between correlation and causation.
+SHAP makes transparent the correlations picked up by predictive ML models. But making correlations transparent does not make them causal! 
+All predictive models implicitly assume that everyone will keep behaving the same way in the future, and therefore correlation patterns will stay constant.
+To understand what happens if someone starts behaving differently, we need to build causal models, which requires making assumptions and using the tools of causal analysis.

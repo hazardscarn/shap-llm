@@ -1,0 +1,23 @@
+Dataset Overview: Contains 7043 rows and 21 columns. Missing Values: Total missing entries 11. 
+tenure: distribution across different percentiles Mean: 32.37, Std: 24.56 Min: 0.00, 10th Percentile: 2.00, 25th Percentile: 9.00, Median (50th Percentile): 29.00, 75th Percentile: 55.00, 90th Percentile: 69.00, Max: 72.00 Missing: 0 (0.00%) 
+monthlycharges: distribution across different percentiles Mean: 64.76, Std: 30.09 Min: 18.25, 10th Percentile: 20.05, 25th Percentile: 35.50, Median (50th Percentile): 70.35, 75th Percentile: 89.85, 90th Percentile: 102.60, Max: 118.75 Missing: 0 (0.00%) 
+totalcharges: distribution across different percentiles Mean: 2283.30, Std: 2266.77 Min: 18.80, 10th Percentile: 84.60, 25th Percentile: 401.45, Median (50th Percentile): 1397.47, 75th Percentile: 3794.74, 90th Percentile: 5976.64, Max: 8684.80 Missing: 11 (0.16%) 
+gender: distribution across top 10 categories Top Categories distribution: {'Male': 3555, 'Female': 3488} Missing values: 0 (0.00%) 
+seniorcitizen: distribution across top 10 categories Top Categories distribution: {0: 5901, 1: 1142} Missing values: 0 (0.00%) 
+partner: distribution across top 10 categories Top Categories distribution: {'No': 3641, 'Yes': 3402} Missing values: 0 (0.00%) 
+dependents: distribution across top 10 categories Top Categories distribution: {'No': 4933, 'Yes': 2110} Missing values: 0 (0.00%) 
+phoneservice: distribution across top 10 categories Top Categories distribution: {'Yes': 6361, 'No': 682} Missing values: 0 (0.00%) 
+multiplelines: distribution across top 10 categories Top Categories distribution: {'No': 3390, 'Yes': 2971, 'No phone service': 682} Missing values: 0 (0.00%) 
+internetservice: distribution across top 10 categories Top Categories distribution: {'Fiber optic': 3096, 'DSL': 2421, 'No': 1526} Missing values: 0 (0.00%) 
+onlinesecurity: distribution across top 10 categories Top Categories distribution: {'No': 3498, 'Yes': 2019, 'No internet service': 1526} Missing values: 0 (0.00%) 
+onlinebackup: distribution across top 10 categories Top Categories distribution: {'No': 3088, 'Yes': 2429, 'No internet service': 1526} Missing values: 0 (0.00%) 
+deviceprotection: distribution across top 10 categories Top Categories distribution: {'No': 3095, 'Yes': 2422, 'No internet service': 1526} Missing values: 0 (0.00%) 
+techsupport: distribution across top 10 categories Top Categories distribution: {'No': 3473, 'Yes': 2044, 'No internet service': 1526} Missing values: 0 (0.00%) 
+streamingtv: distribution across top 10 categories Top Categories distribution: {'No': 2810, 'Yes': 2707, 'No internet service': 1526} Missing values: 0 (0.00%) 
+streamingmovies: distribution across top 10 categories Top Categories distribution: {'No': 2785, 'Yes': 2732, 'No internet service': 1526} Missing values: 0 (0.00%) 
+contract: distribution across top 10 categories Top Categories distribution: {'Month-to-month': 3875, 'Two year': 1695, 'One year': 1473} Missing values: 0 (0.00%) 
+paperlessbilling: distribution across top 10 categories Top Categories distribution: {'Yes': 4171, 'No': 2872} Missing values: 0 (0.00%) 
+paymentmethod: distribution across top 10 categories Top Categories distribution: {'Electronic check': 2365, 'Mailed check': 1612, 'Bank transfer (automatic)': 1544, 'Credit card (automatic)': 1522} Missing values: 0 (0.00%) 
+Pearson correlation among numeric features: 
+tenure and totalcharges: have high correlation of 0.83 
+monthlycharges and totalcharges: have high correlation of 0.65
