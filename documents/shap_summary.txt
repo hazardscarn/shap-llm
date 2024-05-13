@@ -1,0 +1,99 @@
+SHAP contribution:
+Below is the description of partial dependence(PD) of target prediction on all the features.
+
+                            They help in understanding how the features affect the predictions of a model, regardless of the values of other features.
+
+                         When gender is Female, it increases the probability of class 1 by 0.35%. 
+ When gender is Male, it decreases the probability of class 1 by 0.47%. 
+ When seniorcitizen is 0, it decreases the probability of class 1 by 0.60%. 
+ When seniorcitizen is 1, it increases the probability of class 1 by 1.77%. 
+ When partner is No, it decreases the probability of class 1 by 0.48%. 
+ When partner is Yes, it increases the probability of class 1 by 1.11%. 
+ When dependents is No, it increases the probability of class 1 by 0.27%. 
+ When dependents is Yes, it decreases the probability of class 1 by 1.31%. 
+ When phoneservice is No, it increases the probability of class 1 by 2.31%. 
+ When phoneservice is Yes, it decreases the probability of class 1 by 0.38%. 
+ When multiplelines is No, it decreases the probability of class 1 by 2.98%. 
+ When multiplelines is No phone service, it increases the probability of class 1 by 1.24%. 
+ When multiplelines is Yes, it increases the probability of class 1 by 2.22%. 
+ When internetservice is DSL, it decreases the probability of class 1 by 4.10%. 
+ When internetservice is Fiber optic, it increases the probability of class 1 by 3.88%. 
+ When internetservice is No, it decreases the probability of class 1 by 1.77%. 
+ When onlinesecurity is No, it increases the probability of class 1 by 3.47%. 
+ When onlinesecurity is No internet service, it decreases the probability of class 1 by 4.83%. 
+ When onlinesecurity is Yes, it decreases the probability of class 1 by 6.08%. 
+ When onlinebackup is No, it increases the probability of class 1 by 1.69%. 
+ When onlinebackup is No internet service, it decreases the probability of class 1 by 2.50%. 
+ When onlinebackup is Yes, it decreases the probability of class 1 by 1.57%. 
+ When deviceprotection is No, it increases the probability of class 1 by 0.24%. 
+ When deviceprotection is No internet service, it decreases the probability of class 1 by 0.53%. 
+ When deviceprotection is Yes, it increases the probability of class 1 by 0.59%. 
+ When techsupport is No, it increases the probability of class 1 by 2.53%. 
+ When techsupport is No internet service, it decreases the probability of class 1 by 3.35%. 
+ When techsupport is Yes, it decreases the probability of class 1 by 5.05%. 
+ When streamingtv is No, it decreases the probability of class 1 by 1.69%. 
+ When streamingtv is No internet service, it decreases the probability of class 1 by 0.81%. 
+ When streamingtv is Yes, it increases the probability of class 1 by 1.55%. 
+ When streamingmovies is No, it decreases the probability of class 1 by 0.63%. 
+ When streamingmovies is No internet service, it decreases the probability of class 1 by 1.27%. 
+ When streamingmovies is Yes, it increases the probability of class 1 by 1.80%. 
+ When contract is Month-to-month, it increases the probability of class 1 by 16.49%. 
+ When contract is One year, it decreases the probability of class 1 by 9.84%. 
+ When contract is Two year, it decreases the probability of class 1 by 19.73%. 
+ When paperlessbilling is No, it decreases the probability of class 1 by 3.55%. 
+ When paperlessbilling is Yes, it increases the probability of class 1 by 1.72%. 
+ When paymentmethod is Bank transfer (automatic), it decreases the probability of class 1 by 1.66%. 
+ When paymentmethod is Credit card (automatic), it decreases the probability of class 1 by 2.88%. 
+ When paymentmethod is Electronic check, it increases the probability of class 1 by 4.13%. 
+ When paymentmethod is Mailed check, it decreases the probability of class 1 by 4.60%. 
+ When tenure is within (-0.001, 2.0], it increases the probability of class 1 by 13.86%. 
+ When tenure is within (2.0, 5.0], it increases the probability of class 1 by 7.47%. 
+ When tenure is within (5.0, 11.0], it increases the probability of class 1 by 3.01%. 
+ When tenure is within (11.0, 19.0], it decreases the probability of class 1 by 0.23%. 
+ When tenure is within (19.0, 28.0], it decreases the probability of class 1 by 5.11%. 
+ When tenure is within (28.0, 40.0], it decreases the probability of class 1 by 4.89%. 
+ When tenure is within (40.0, 52.0], it decreases the probability of class 1 by 5.62%. 
+ When tenure is within (52.0, 61.0], it decreases the probability of class 1 by 7.50%. 
+ When tenure is within (61.0, 70.0], it decreases the probability of class 1 by 12.54%. 
+ When tenure is within (70.0, 72.0], it decreases the probability of class 1 by 21.36%. 
+ When monthlycharges is within (18.698999999999998, 20.04], it decreases the probability of class 1 by 9.98%. 
+ When monthlycharges is within (20.04, 24.85], it decreases the probability of class 1 by 11.49%. 
+ When monthlycharges is within (24.85, 46.08], it decreases the probability of class 1 by 7.67%. 
+ When monthlycharges is within (46.08, 59.16], it decreases the probability of class 1 by 6.18%. 
+ When monthlycharges is within (59.16, 69.8], it decreases the probability of class 1 by 6.67%. 
+ When monthlycharges is within (69.8, 77.96], it decreases the probability of class 1 by 3.46%. 
+ When monthlycharges is within (77.96, 85.0], it decreases the probability of class 1 by 2.96%. 
+ When monthlycharges is within (85.0, 93.71], it decreases the probability of class 1 by 4.23%. 
+ When monthlycharges is within (93.71, 102.75], it increases the probability of class 1 by 8.16%. 
+ When monthlycharges is within (102.75, 118.75], it increases the probability of class 1 by 15.17%. 
+ When totalcharges is within (18.898999999999997, 79.35], it increases the probability of class 1 by 18.09%. 
+ When totalcharges is within (79.35, 243.83], it increases the probability of class 1 by 4.72%. 
+ When totalcharges is within (243.83, 515.48], it decreases the probability of class 1 by 1.44%. 
+ When totalcharges is within (515.48, 927.31], it decreases the probability of class 1 by 0.67%. 
+ When totalcharges is within (927.31, 1341.125], it decreases the probability of class 1 by 0.35%. 
+ When totalcharges is within (1341.125, 1961.22], it decreases the probability of class 1 by 7.53%. 
+ When totalcharges is within (1961.22, 3159.83], it decreases the probability of class 1 by 4.19%. 
+ When totalcharges is within (3159.83, 4445.63], it decreases the probability of class 1 by 10.19%. 
+ When totalcharges is within (4445.63, 5939.18], it decreases the probability of class 1 by 1.37%. 
+ When totalcharges is within (5939.18, 8672.45], it increases the probability of class 1 by 3.57%. 
+ Feature importance from the SHAP summary is another tool that helps us understand what are top contributors towards model prediction
+and outcome. The mean absolute SHAP value provides an aggregate measure of the overall impact that each feature has on the model's predictions. Below is the feature importance summary of all feaures used in the model.
+ The importance rank of contract  in the model prediction is 1 with a mean absolute SHAP value of 1.0522.
+ The importance rank of tenure  in the model prediction is 2 with a mean absolute SHAP value of 0.6248.
+ The importance rank of monthlycharges  in the model prediction is 3 with a mean absolute SHAP value of 0.5191.
+ The importance rank of totalcharges  in the model prediction is 4 with a mean absolute SHAP value of 0.4363.
+ The importance rank of onlinesecurity  in the model prediction is 5 with a mean absolute SHAP value of 0.2614.
+ The importance rank of paymentmethod  in the model prediction is 6 with a mean absolute SHAP value of 0.2245.
+ The importance rank of techsupport  in the model prediction is 7 with a mean absolute SHAP value of 0.2001.
+ The importance rank of internetservice  in the model prediction is 8 with a mean absolute SHAP value of 0.1948.
+ The importance rank of multiplelines  in the model prediction is 9 with a mean absolute SHAP value of 0.1458.
+ The importance rank of paperlessbilling  in the model prediction is 10 with a mean absolute SHAP value of 0.1444.
+ The importance rank of onlinebackup  in the model prediction is 11 with a mean absolute SHAP value of 0.1125.
+ The importance rank of streamingmovies  in the model prediction is 12 with a mean absolute SHAP value of 0.0901.
+ The importance rank of streamingtv  in the model prediction is 13 with a mean absolute SHAP value of 0.0876.
+ The importance rank of gender  in the model prediction is 14 with a mean absolute SHAP value of 0.0867.
+ The importance rank of seniorcitizen  in the model prediction is 15 with a mean absolute SHAP value of 0.0725.
+ The importance rank of partner  in the model prediction is 16 with a mean absolute SHAP value of 0.0708.
+ The importance rank of dependents  in the model prediction is 17 with a mean absolute SHAP value of 0.0508.
+ The importance rank of deviceprotection  in the model prediction is 18 with a mean absolute SHAP value of 0.0480.
+ The importance rank of phoneservice  in the model prediction is 19 with a mean absolute SHAP value of 0.0312.

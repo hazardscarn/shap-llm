@@ -1,0 +1,37 @@
+Customer ID: Unique customer identifier
+gender: Whether the customer is a male or a female
+SeniorCitizen: Whether the customer is a senior citizen or not (1, 0)
+Partner: Whether the customer has a partner or not (Yes, No)
+Dependents: Whether the customer has dependents or not (Yes, No)
+tenure: Number of months the customer has stayed with the company
+PhoneService: Whether the customer has a phone service or not (Yes, No)
+MultipleLines: Whether the customer has multiple lines or not (Yes, No, No phone service)
+InternetService: Customer’s internet service provider (DSL, Fiber optic, No)
+OnlineSecurity: Whether the customer has online security or not (Yes, No, No internet service)
+OnlineBackup: Whether the customer has online backup or not (Yes, No, No internet service)
+DeviceProtection: Whether the customer has device protection or not (Yes, No, No internet service)
+TechSupport: Whether the customer has tech support or not (Yes, No, No internet service)
+StreamingTV: Whether the customer has streaming TV or not (Yes, No, No internet service)
+StreamingMovies: Whether the customer has streaming movies or not (Yes, No, No internet service)
+Contract: The contract term of the customer (Month-to-month, One year, Two year)
+PaperlessBilling: Whether the customer has paperless billing or not (Yes, No)
+PaymentMethod: The customer’s payment method (Electronic check, Mailed check, Bank transfer (automatic), Credit card (automatic))
+MonthlyCharges: The amount charged to the customer monthly
+TotalCharges: The total amount charged to the customer
+Churn: Whether the customer churned or not (Yes or No)
+predicted prob: This si the predicted churn probability for the customer by the model
+
+
+* static user context: These features have static information about the customer like demographics, customer personal information,service information ,how they make payments etc.
+They don't change over time. These features are {gender,SeniorCitizen,Partner,PaperlessBilling,PaymentMethod,MultipleLines,StreamingTV,StreamingMovies}
+
+* dynamic user context: These features have dynamic information about the customer like tenure, charges etc. They are assigned at customer level but they could vary over time for a customer. The tenure would increase over time.
+Similarly the charges would change over time. These features are {tenure,MonthlyCharges,TotalCharges}
+
+* action context: These are the features that describe an action applied to a customer. These contains information about which all services the customer have opted in as of now.
+The possible actions would be pitching the services to customer which they have not opted in on yet. Or pitching a different type of contract that they have now.
+Examples of actions that could be taken:
+	1. if a customer have OnlineSecurity as Yes but InternetService as No, we can pitch the customer with DSL or Fiber optic internet services.
+	2. if a customer have Month-to-month contract pitch them a Two year contract
+The list of different action features are {PhoneService,InternetService,OnlineBackup,OnlineSecurity,DeviceProtection,TechSupport,Contract}
+
